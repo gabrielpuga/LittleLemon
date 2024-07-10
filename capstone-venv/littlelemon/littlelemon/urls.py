@@ -18,6 +18,7 @@ from django.contrib import admin
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
 from restaurant import views
+from djoser import views as djoser_views
 
 router = DefaultRouter() 
 router.register(r'tables',views.BookingViewSet)
