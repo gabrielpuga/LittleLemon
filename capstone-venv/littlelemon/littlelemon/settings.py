@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
-#from rest_framework.authtoken.models import Token
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -41,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'restaurant',
     'rest_framework',
+    'rest_framework.authtoken',
     'djoser',
 ]
 
@@ -111,10 +111,7 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-#AUTHENTICATION_BACKENDS = [
-#    'django.contrib.auth.backends.ModelBackend',  
-#    'djoser.backends.TokenAuthenticationBackend',
-#]
+
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
@@ -149,7 +146,4 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #add the following line
-DJOSER={
-    "USER_ID_FIELD":"username",
-#    'TOKEN_MODEL': 'djoser.Token',
-    }
+DJOSER={ "USER_ID_FIELD":"username", }
