@@ -30,5 +30,5 @@ urlpatterns = [
     path('restaurant/booking/', include(router.urls)),
 #add following lines to update urlpatterns list
     path('auth/', include('djoser.urls')),
-    path('auth/toke/', include('djoser.urls.authtoken')),
+    path('auth/token/', include('djoser.urls.authtoken')),
 ]
