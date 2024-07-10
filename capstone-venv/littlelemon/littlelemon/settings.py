@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+from djoser import TokenAuthenticationBackend
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
