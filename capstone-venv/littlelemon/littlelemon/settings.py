@@ -110,10 +110,10 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-AUTHENTICATION_BACKENDS = [
-    'django.contrib.auth.backends.ModelBackend',  
-    'djoser.backends.TokenAuthenticationBackend',
-]
+#AUTHENTICATION_BACKENDS = [
+#    'django.contrib.auth.backends.ModelBackend',  
+#    'djoser.backends.TokenAuthenticationBackend',
+#]
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
