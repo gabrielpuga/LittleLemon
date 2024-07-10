@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 
 from pathlib import Path
+#from rest_framework.authtoken.models import Token
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -150,4 +151,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 #add the following line
 DJOSER={
     "USER_ID_FIELD":"username",
+#    'TOKEN_MODEL': 'djoser.Token',
     }
