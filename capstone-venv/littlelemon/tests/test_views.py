@@ -14,7 +14,7 @@ class MenuViewTest(TestCase):
         self.token = Token.objects.create(user=self.user)
         
         self.menu1 = Menu.objects.create(title="IceCream", price=1.00, inventory=100)
-        self.menu3 = Menu.objects.create(title="Tamal", price=2.75, inventory=75)
+        self.menu2 = Menu.objects.create(title="Tamal", price=2.75, inventory=75)
 
     def test_getall(self):
         
@@ -27,7 +27,7 @@ class MenuViewTest(TestCase):
 
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
-        expected_data = MenuSerializer([self.menu1, self.menu2, self.menu3], many=True).data
+        expected_data = MenuSerializer([self.menu1, self.menu2], many=True).data
 
         self.assertEqual(response.data, expected_data)
         
